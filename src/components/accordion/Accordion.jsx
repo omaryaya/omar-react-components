@@ -1,7 +1,8 @@
 import React from "react";
 import "./Accordion.css";
+import data from "./data";
 
-const Accordion = ({ data }) => {
+const Accordion = () => {
   const [selected, setSelected] = React.useState(null);
   return (
     <div className="accordion-container">

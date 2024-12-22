@@ -1,14 +1,18 @@
 import { useState } from "react";
 import "./App.css";
 import Accordion from "./components/accordion/Accordion";
-import data from "./components/accordion/data";
+import { Route, Routes } from "react-router-dom";
+import RandomColor from "./components/randomcolors/RandomColor";
 
 function App() {
-  console.log(data);
-
   return (
     <>
-      <Accordion data={data} />
+      {/* <Accordion /> */}
+      <RandomColor />
+      <Routes>
+        <Route path="/" component={Accordion} />
+        <Route path="/randomcolors" component={RandomColor} />
+      </Routes>
     </>
   );
 }
